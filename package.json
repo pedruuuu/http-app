@@ -1,0 +1,11 @@
+{
+  "name": "http-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "author": "pedrodev777 <npmpedro777@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "eventemitter3": "^4.0.7"
+  }
+}
