@@ -57,9 +57,16 @@ class Application extends EventEmitter {
       }
     } = req;
 
+
     let route = this.app._routes.has(pathname) ? this.app._routes.get(pathname): undefined;
 
-    return route ? route.call(this.app, req, res): undefined;
+    res._response.writeHead(200, {
+      'Content-type': 'text/html'
+    });
+
+    route ? route.call(this.app, req, res): undefined;
+
+    return res.ended ? undefined: res.end();
   }
 }
 

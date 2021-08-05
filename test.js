@@ -8,7 +8,7 @@ app.on('ready', () => {
 });
 
 app.get('/', async(req, res) => {
-  res.send('oi');
+  return res.send('oi');
 });
 
 app.listen(3333);
